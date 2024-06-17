@@ -30,7 +30,6 @@ plugins:
   - mkdocstrings
 theme:
   name: material
-  custom_dir: overrides
   features:
     - announce.dismiss
     - content.code.annotate
