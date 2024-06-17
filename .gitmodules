@@ -1,0 +1,4 @@
+[submodule "docs/IntelOwl"]
+	path = docs/IntelOwl
+	url = git@github.com:aryan-bhokare/IntelOwl.git
+	branch = mkdocs
