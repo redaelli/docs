@@ -21,14 +21,36 @@ jobs:
         with:
           submodules: recursive # Recursively checkout submodules
 
+      - name: Display Git Status
+        run: git status
+
+      - name: Display Submodule Info
+        run: git submodule status --recursive
+
       - name: Set up Git
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
 
+      - name: Fetch Submodule Branches
+        run: |
+          git submodule foreach --recursive 'git fetch --all'
+          git submodule foreach --recursive 'git fetch origin +refs/heads/*:refs/remotes/origin/*'
+
+      # - name: Fetch Submodule Branches
+      #   run: git submodule foreach --recursive 'git fetch origin +refs/heads/*:refs/remotes/origin/*'
+
+      - name: Debugging - List all branches
+        run: |
+          echo "Main repository branches:"
+          git branch -r
+          echo "Submodule branches:"
+          git submodule foreach --recursive 'git branch -r'
+
       - name: Update submodules
         id: update_submodules
         run: |
+          git submodule sync --recursive
           git submodule update --remote --recursive
           git diff --quiet || echo "Submodules changed" && echo "::set-output name=changed::true"
 
