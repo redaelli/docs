@@ -1,0 +1,49 @@
+name: Update Submodules and Publish Docs
+
+on:
+  repository_dispatch:
+    types:
+      - update-docs
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *" # This will run the workflow daily
+  workflow_dispatch: # Allows manual triggering of the workflow from the Actions tab
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive # Recursively checkout submodules
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+
+      - name: Update submodules
+        id: update_submodules
+        run: |
+          git submodule update --remote --recursive
+          git diff --quiet || echo "Submodules changed" && echo "::set-output name=changed::true"
+
+      - name: Commit and push submodule changes
+        if: steps.update_submodules.outputs.changed == 'true'
+        run: |
+          git add .
+          git commit -m "Update submodules"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy docs if changes in submodules
+        if: steps.update_submodules.outputs.changed == 'true'
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REQUIREMENTS: requirements.txt
