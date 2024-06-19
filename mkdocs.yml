@@ -9,8 +9,8 @@ repo_name: intelowlproject/docs
 repo_url: https://github.com/intelowlproject/docs
 
 nav:
+  - Home: "index.md"
   - IntelOwl:
-      - Home: "IntelOwl/docs/index.md"
       - Introduction: "IntelOwl/docs/introduction.md"
       - Installation: "IntelOwl/docs/installation.md"
       - Advanced Configuration: "IntelOwl/docs/advanced_configuration.md"
@@ -29,6 +29,7 @@ plugins:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - monorepo
   - mkdocstrings
+
 theme:
   name: material
   # custom_dir: overrides
@@ -48,9 +49,28 @@ theme:
   font:
     text: IBM Plex Sans
     code: Roboto Mono
+
 # CSS
 extra_css:
   - assets/css/custom.css
+
+extra:
+  version:
+    provider: mike
+  analytics:
+    provider: google
+    property: G-DB4K9LZPDZ
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/intelowlproject
+    - icon: fontawesome/brands/slack
+      link: https://honeynetpublic.slack.com/archives/C01KVGMAKL6
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/intelowl
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/intel_owl
+
 markdown_extensions:
   - attr_list
   - md_in_html
