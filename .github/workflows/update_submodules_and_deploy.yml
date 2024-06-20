@@ -4,11 +4,6 @@ on:
   repository_dispatch:
     types:
       - update-docs
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "0 0 * * *" # This will run the workflow daily
   workflow_dispatch: # Allows manual triggering of the workflow from the Actions tab
 
 jobs:
