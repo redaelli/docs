@@ -12,6 +12,11 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
 
+      - name: List files for debugging
+        run: |
+          ls -R docs/Submodules/IntelOwl
+          cat docs/Submodules/IntelOwl/old-docs/source/schema.yml
+
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
