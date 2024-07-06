@@ -34,10 +34,13 @@ plugins:
   - monorepo
   - mkdocstrings
   - swagger-ui-tag:
-      background: white
+      background: transparent
+      text: white
       docExpansion: none
       filter: true
       syntaxHighlightTheme: monokai
+      extra_css:
+        - assets/css/SwaggerDark.css
       # tryItOutEnabled: true
 
 theme:
@@ -63,6 +66,7 @@ theme:
 # CSS
 extra_css:
   - assets/css/custom.css
+  - assests/css/SwaggerDark.css
 
 extra:
   version:
