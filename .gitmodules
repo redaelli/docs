@@ -1,0 +1,3 @@
+[submodule "docs/Submodules/IntelOwl"]
+	path = docs/Submodules/IntelOwl
+	url = git@github.com:aryan-bhokare/IntelOwl.git
