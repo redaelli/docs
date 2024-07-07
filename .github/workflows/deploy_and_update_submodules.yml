@@ -33,6 +33,7 @@ jobs:
       - name: Fetch Submodule Branches
         run: |
           git submodule foreach --recursive 'git fetch --all'
+          git submodule update --init --remote --recursive
           git submodule foreach --recursive 'git fetch origin +refs/heads/*:refs/remotes/origin/*'
 
       # - name: Fetch Submodule Branches
@@ -52,8 +53,22 @@ jobs:
           git submodule update --remote --recursive
           git diff --quiet || echo "Submodules changed" && echo "::set-output name=changed::true"
 
+      - name: Verify submodule files
+        run: |
+          ls -R docs/Submodules/IntelOwl
+          cat docs/Submodules/IntelOwl/old-docs/source/schema.yml || true
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ "$(git status --porcelain)" ]]; then
+            echo "changes=true" >> $GITHUB_ENV
+          else
+            echo "changes=false" >> $GITHUB_ENV
+          fi
+
       - name: Commit and push submodule changes
-        if: steps.update_submodules.outputs.changed == 'true'
+        if: env.changes == 'true'
         run: |
           git add .
           git commit -m "Update submodules"
