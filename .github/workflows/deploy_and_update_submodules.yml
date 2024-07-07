@@ -1,9 +1,6 @@
 name: Update Submodules and Publish Docs
 
 on:
-  push:
-    branches:
-      - main
   repository_dispatch:
     types:
       - update-docs
