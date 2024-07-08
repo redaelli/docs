@@ -7,3 +7,6 @@
 [submodule "docs/Submodules/pyintelowl"]
 	path = docs/Submodules/pyintelowl
 	url = git@github.com:intelowlproject/pyintelowl.git
+[submodule "docs/Submodules/GoIntelOwl"]
+	path = docs/Submodules/GoIntelOwl
+	url = git@github.com:intelowlproject/go-intelowl.git
