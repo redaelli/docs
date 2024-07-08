@@ -4,3 +4,6 @@
 [submodule "docs/Submodules/GreedyBear"]
 	path = docs/Submodules/GreedyBear
 	url = git@github.com:intelowlproject/GreedyBear.git
+[submodule "docs/Submodules/pyintelowl"]
+	path = docs/Submodules/pyintelowl
+	url = git@github.com:intelowlproject/pyintelowl.git
