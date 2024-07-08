@@ -1,3 +1,6 @@
 [submodule "docs/Submodules/IntelOwl"]
 	path = docs/Submodules/IntelOwl
 	url = git@github.com:aryan-bhokare/IntelOwl.git
+[submodule "docs/Submodules/GreedyBear"]
+	path = docs/Submodules/GreedyBear
+	url = git@github.com:intelowlproject/GreedyBear.git
