@@ -21,6 +21,7 @@ Main features:
 
 To know more about the project and its growth over time, you may be interested in reading the following official blog posts and/or videos:
 
+- [FIRSTCON 24 Fukuoka (Japan)](https://youtu.be/1L5rzvlRjdU?feature=shared)
 - [The Honeynet Workshop: Denmark 2024](https://github.com/intelowlproject/thp_workshop_2024)
 - [Certego Blog: v6 Announcement (in Italian)](https://www.certego.net/blog/intelowl-six-release/)
 - [HackinBo 2023 Presentation (in Italian)](https://www.youtube.com/watch?v=55GKEZoDBgU)
