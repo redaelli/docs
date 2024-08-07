@@ -1,0 +1,12 @@
+[submodule "docs/Submodules/IntelOwl"]
+	path = docs/Submodules/IntelOwl
+	url = git@github.com:aryan-bhokare/IntelOwl.git
+[submodule "docs/Submodules/GreedyBear"]
+	path = docs/Submodules/GreedyBear
+	url = git@github.com:aryan-bhokare/GreedyBear.git
+[submodule "docs/Submodules/pyintelowl"]
+	path = docs/Submodules/pyintelowl
+	url = git@github.com:aryan-bhokare/pyintelowl.git
+[submodule "docs/Submodules/GoIntelOwl"]
+	path = docs/Submodules/GoIntelOwl
+	url = git@github.com:aryan-bhokare/go-intelowl.git
