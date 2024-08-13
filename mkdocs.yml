@@ -28,6 +28,10 @@ nav:
       - index: "pyintelowl/index.md"
   - GoIntelOwl:
       - index: "GoIntelOwl/index.md"
+  - Guides:
+      - Documentation guide: "Guide-documentation.md"
+      - Docstrings guide: "Guide-docstrings.md"
+      - Submodules: "Submodules.md"
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
