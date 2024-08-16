@@ -2,21 +2,6 @@
 
 This page includes the most important things to know and understand when using IntelOwl.
 
-- [How to interact with IntelOwl](#how-to-interact-with-intelowl)
-- [Plugins Framework](#plugins-framework)
-  - [Analyzers](#analyzers)
-  - [Connectors](#connectors)
-  - [Pivots](#pivots)
-  - [Visualizers](#visualizers)
-  - [Ingestors](#ingestors)
-  - [Playbooks](#playbooks)
-  - [Generic Plugin Creation, Configuration and Customization](#generic-plugin-creation-configuration-and-customization)
-  - [Enabling or Disabling Plugins](#enabling-or-disabling-plugins)
-  - [Special Plugins operations](#special-plugins-operations)
-  - [TLP Support](#tlp-support)
-- [Investigations Framework](#investigations-framework)
-  - [Create and populate an Investigation](#create-and-populate-an-investigation)
-
 ## How to interact with IntelOwl
 
 Intel Owl main objective is to provide a single API interface to query in order to retrieve threat intelligence at scale.

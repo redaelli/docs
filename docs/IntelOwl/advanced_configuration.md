@@ -2,28 +2,6 @@
 
 This page includes details about some advanced features that Intel Owl provides which can be **optionally** configured by the administrator.
 
-- [ElasticSearch](#elastic-search)
-  - [Kibana](#kibana)
-  - [Example Configuration](#example-configuration)
-  - [Business Intelligence](#business-intelligence)
-- [Authentication options](#authentication-options)
-  - [OAuth support](#google-oauth2)
-  - [LDAP](#ldap)
-  - [RADIUS](#radius-authentication)
-- [OpenCTI support](#opencti)
-- [Cloud Support](#cloud-support)
-  - [AWS support](#aws-support)
-    - [Secrets](#secrets)
-    - [SQS](#sqs)
-    - [S3](#s3)
-    - [SES](#ses)
-  - [Google Kubernetes Engine](#google-kubernetes-engine)
-- [Queues](#queues)
-  - [Multi Queue](#multi-queue)
-  - [Queue Customization](#queue-customization)
-  - [Queue monitoring](#queue-monitoring)
-- [Manual usage](#manual-usage)
-
 ## ElasticSearch
 
 Right now only ElasticSearch v8 is supported.

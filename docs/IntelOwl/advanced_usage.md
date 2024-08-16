@@ -2,19 +2,6 @@
 
 This page includes details about some advanced features that Intel Owl provides which can be **optionally** enabled. Namely,
 
-- [Advanced Usage](#advanced-usage)
-  - [Organizations and User Management](#organizations-and-user-management)
-    - [Multi Tenancy](#multi-tenancy)
-    - [Registration](#registration)
-  - [Optional Analyzers](#optional-analyzers)
-  - [Customize analyzer execution](#customize-analyzer-execution)
-    - [from the GUI](#from-the-gui)
-    - [from Pyintelowl](#from-pyintelowl)
-    - [CyberChef](#cyberchef)
-    - [PhoneInfoga](#phoneinfoga)
-  - [Analyzers with special configuration](#analyzers-with-special-configuration)
-  - [Notifications](#notifications)
-
 ## Organizations and User management
 
 Starting from IntelOwl v4, a new "Organization" section is available on the GUI. This section substitute the previous permission management via Django Admin and aims to provide an easier way to manage users and visibility.
