@@ -25,7 +25,10 @@ nav:
       - Contribute: "GreedyBear/Contribute.md"
       - API docs: "GreedyBear/Api-docs.md"
   - PyIntelOwl:
-      - index: "pyintelowl/index.md"
+      - Quickstart: "pyintelowl/index.md"
+      - Modules:
+        - IntelOwlClass: "pyintelowl/IntelOwlClass.md"
+        - IntelOwlClientException: "pyintelowl/IntelOwlClientException.md"
   - GoIntelOwl:
       - index: "GoIntelOwl/index.md"
   - Guides:
