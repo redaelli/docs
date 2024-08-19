@@ -115,7 +115,7 @@ For more details on how to configure this file, check the <a href="https://githu
 
 ## OpenCTI
 
-Like many other integrations that we have, we have an [Analyzer](https://intelowl.readthedocs.io/en/latest/Usage.html#analyzers) and a [Connector](https://intelowl.readthedocs.io/en/latest/Usage.html#connectors) for the [OpenCTI](<[OpenCTI](https://github.com/OpenCTI-Platform/opencti)>) platform.
+Like many other integrations that we have, we have an [Analyzer](https://intelowlproject.github.io/docs/IntelOwl/usage/#analyzers) and a [Connector](https://intelowlproject.github.io/docs/IntelOwl/usage/#connectors) for the [OpenCTI](<[OpenCTI](https://github.com/OpenCTI-Platform/opencti)>) platform.
 
 This allows the users to leverage these 2 popular open source projects and frameworks together.
 
@@ -305,7 +305,7 @@ All other options available in the `./start` script (`./start -h` to view them) 
 
 ### Optional Analyzer
 
-IntelOwl includes integrations with [some analyzer](https://intelowl.readthedocs.io/en/latest/Advanced-Usage.html#optional-analyzers) that are not enabled by default.
+IntelOwl includes integrations with [some analyzer](https://intelowlproject.github.io/docs/IntelOwl/advanced_usage/#optional-analyzers) that are not enabled by default.
 These analyzers, stored under the `integrations/` directory, are packed within Docker Compose files.
 The `compose.yml` file has to be chained to include the analyzer.
 The additional `compose-test.yml` file has to be chained for testing environment.

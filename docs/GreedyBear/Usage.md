@@ -79,7 +79,7 @@ The available formats are:
 - `csv`: CSV-like file (just one line for each IOC)
 - `json`: JSON file with additional information regarding the IOCs
 
-Check the [Redoc specification](https://greedybear.readthedocs.io/en/latest/Redoc.html) or the to get all the details about how to use the available APIs.
+Check the [API specification](https://intelowlproject.github.io/docs/GreedyBear/Api-docs/) or the to get all the details about how to use the available APIs.
 
 ## Enrichment
 

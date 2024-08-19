@@ -198,7 +198,7 @@ There are 3 options to execute the web server:
 
   Then you should call the `./start` script with the parameter `--https` to leverage the right Docker Compose file for HTTPS.
 
-  Plus, if you use [Flower](Advanced-Configuration.html#queue-customization), you should change in the `docker/flower.override.yml` the `flower_http.conf` with `flower_https.conf`.
+  Plus, if you use [Flower](https://intelowlproject.github.io/docs/IntelOwl//advanced_configuration/#queue-customization), you should change in the `docker/flower.override.yml` the `flower_http.conf` with `flower_https.conf`.
 
 - **HTTPS with Let's Encrypt**
 
@@ -221,7 +221,7 @@ The CLI provides the primitives to correctly build, run or stop the containers f
 
 <ul>
 <li>It is possible to attach every optional docker container that IntelOwl has:
-<a href="Advanced-Configuration.html#multi-queue"><em>multi_queue</em></a> with <em>traefik</em> enabled while every <a href="Advanced-Usage.html#optional-analyzers">optional docker analyzer</a> is active.</li> 
+<a href="https://intelowlproject.github.io/docs/IntelOwl/advanced_configuration/#multi-queue"><em>multi_queue</em></a> with <em>traefik</em> enabled while every <a href="https://intelowlproject.github.io/docs/IntelOwl/advanced_usage/#optional-analyzers">optional docker analyzer</a> is active.</li> 
 <li>It is possible to insert an optional docker argument that the CLI will pass to <code>docker-compose</code></li>
 </ul>
 </div>
@@ -376,7 +376,7 @@ IntelOwl v5 introduced some major changes regarding how the plugins and their re
 Before upgrading, some important things should be checked by the administrator:
 
 - A lot of database migrations will need to be applied. Just be patient few minutes once you install the new major release. If you get 500 status code errors in the GUI, just wait few minutes and then refresh the page.
-- We moved away from the old big `analyzer_config.json` which was storing all the base configuration of the Analyzers to a database model (we did the same for all the other plugins types too). This allows us to manage plugins creation/modification/deletion in a more reliable manner and via the Django Admin Interface. If you have created custom plugins and changed those `<plugins>_config.json` file manually, you would need to re-create those custom plugins again from the Django Admin Interface. To do that please follow the [related new documentation](https://intelowl.readthedocs.io/en/develop/Usage.html#analyzers-customization)
+- We moved away from the old big `analyzer_config.json` which was storing all the base configuration of the Analyzers to a database model (we did the same for all the other plugins types too). This allows us to manage plugins creation/modification/deletion in a more reliable manner and via the Django Admin Interface. If you have created custom plugins and changed those `<plugins>_config.json` file manually, you would need to re-create those custom plugins again from the Django Admin Interface. To do that please follow the [related new documentation](https://intelowlproject.github.io/docs/IntelOwl/usage/#analyzers-customization)
 - We have REMOVED all the analyzers that we deprecated during the v4 releases cycle. Please substitute them with their respective new names, in case they have a replacement.
   - REMOVED `Pulsedive_Active_IOC` analyzer. Please substitute it with the new `Pulsedive` analyzer.
   - REMOVED `Fortiguard` analyzer because endpoint does not work anymore. No substitute.

@@ -18,7 +18,7 @@ Intel Owl welcomes contributors from anywhere and from any kind of education or 
 
 For this reason it is important to follow some easy rules based on a simple but important concept: **Respect**.
 
-- Before asking any questions regarding how the project works, please read _through all the documentation_ and [install](https://intelowl.readthedocs.io/en/latest/Installation.html) the project on your own local machine to try it and understand how it basically works. This is a form of respect to the maintainers.
+- Before asking any questions regarding how the project works, please read _through all the documentation_ and [install](https://intelowlproject.github.io/docs/IntelOwl/installation) the project on your own local machine to try it and understand how it basically works. This is a form of respect to the maintainers.
 
 - DO NOT contact the maintainers with direct messages unless it is an urgent request. We don't have much time and cannot just answer to all the questions that we receive like "Guide me please! Help me understand how the project work". There is plenty of documentation and a lot of people in the community that can help you and would benefit from your questions. Share your problems and your knowledge. Please ask your questions in open channels (Github and Slack). This is a form of respect to the maintainers and to the community.
 
@@ -36,7 +36,7 @@ Keeping to a consistent code style throughout the project makes it easier to con
 
 ## How to start (Setup project and development instance)
 
-This guide assumes that you have already performed the steps required to install the project. If not, please do it ([Installation Guide](https://intelowl.readthedocs.io/en/latest/Installation.html)).
+This guide assumes that you have already performed the steps required to install the project. If not, please do it ([Installation Guide](https://intelowlproject.github.io/docs/IntelOwl/installation)).
 
 Create a personal fork of the project on Github.
 Then, please create a new branch based on the **develop** branch that contains the most recent changes. This is mandatory.
@@ -402,7 +402,7 @@ To allow other people to use your configuration, that is now stored in your loca
     4. PluginConfig
 2.  Example: `docker exec -ti intelowl_uwsgi python3 manage.py dumpplugin AnalyzerConfig <new_analyzer_name>`
 
-Add the new analyzer in the lists in the docs: [Usage](./Usage.md). Also, if the analyzer provides additional optional configuration, add the available options here: [Advanced-Usage](./Advanced-Usage.html#analyzers-with-special-configuration)
+Add the new analyzer in the lists in the docs: [Usage](./Usage.md). Also, if the analyzer provides additional optional configuration, add the available options here: [Advanced-Usage](https://intelowlproject.github.io/docs/IntelOwl/advanced_usage/#analyzers-with-special-configuration)
 
 In the Pull Request remember to provide some real world examples (screenshots and raw JSON results) of some successful executions of the analyzer to let us understand how it would work.
 
