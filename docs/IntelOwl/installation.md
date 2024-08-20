@@ -212,7 +212,7 @@ There are 3 options to execute the web server:
 
   Then you should call the `./start` script with the parameter `--https` to leverage the right Docker Compose file for HTTPS.
 
-  Plus, if you use [Flower](https://intelowlproject.github.io/docs/IntelOwl//advanced_configuration/#queue-customization), you should change in the `docker/flower.override.yml` the `flower_http.conf` with `flower_https.conf`.
+  Plus, if you use [Flower](https://intelowlproject.github.io/docs/IntelOwl/advanced_configuration/#queue-customization), you should change in the `docker/flower.override.yml` the `flower_http.conf` with `flower_https.conf`.
 
 - **HTTPS with Let's Encrypt**
 

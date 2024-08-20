@@ -26,9 +26,12 @@ nav:
       - API docs: "GreedyBear/Api-docs.md"
   - PyIntelOwl:
       - Quickstart: "pyintelowl/index.md"
-      - Modules:
-        - IntelOwlClass: "pyintelowl/IntelOwlClass.md"
-        - IntelOwlClientException: "pyintelowl/IntelOwlClientException.md"
+      - Usage:
+          - Modules:
+            - IntelOwlClass: "pyintelowl/IntelOwlClass.md"
+            - IntelOwlClientException: "pyintelowl/IntelOwlClientException.md"
+      - Development:
+          - Tests: "pyintelowl/Tests.md"
   - GoIntelOwl:
       - index: "GoIntelOwl/index.md"
   - Guides:
