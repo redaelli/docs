@@ -1,9 +1,9 @@
 site_name: IntelOwl Documentation
-site_description: "A centralised documentation for all the projects under IntelOwl."
-site_author: "Matteo Lodi"
+site_description: "A centralized documentation for all the projects under IntelOwl."
+site_author: "IntelOwl Project"
 
 copyright: |
-  &copy; Matteo Lodi
+  &copy; IntelOwl Project
 
 repo_name: intelowlproject/docs
 repo_url: https://github.com/intelowlproject/docs
