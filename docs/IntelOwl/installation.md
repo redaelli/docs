@@ -71,7 +71,7 @@ These are our recommendations for dedicated deployments of IntelOwl:
 * Basic Installation in a VM: 2 CPU, 4GB RAM, 20GB Disk
 * Intensive Usage (hundreds of analysis in a hour) in a single VM: 8CPU, 16GB RAM and 80GB Disk.
 
-Please remember that every environment has its own peculiarities so this numbers must not be taken as the holy grail.
+Please remember that every environment has its own peculiarities so these numbers must not be taken as the holy grail.
 
 What should be done is a comprehensive evaluation of the environment where the application will deployed.
 
