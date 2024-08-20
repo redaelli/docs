@@ -55,7 +55,6 @@ plugins:
 
 theme:
   name: material
-  # custom_dir: overrides
   logo: static/intel_owl_negative.png
   features:
     - navigation.tabs
