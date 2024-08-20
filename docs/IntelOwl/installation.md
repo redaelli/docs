@@ -65,6 +65,20 @@ The first time you start IntelOwl, a lot of database migrations are being applie
 [//]: # 'There is a <a href="https://www.youtube.com/watch?v=GuEhqQJSQAs" target="_blank">YouTube video</a> that may help in the installation process. (<i>ManySteps have changed since v2.0.0</i>)'
 [//]: # "</div>"
 
+## Infrastructure Requirements
+
+These are our recommendations for dedicated deployments of IntelOwl:
+* Basic Installation in a VM: 2 CPU, 4GB RAM, 20GB Disk
+* Intensive Usage (hundreds of analysis in a hour) in a single VM: 8CPU, 16GB RAM and 80GB Disk.
+
+Please remember that every environment has its own peculiarities so this numbers must not be taken as the holy grail.
+
+What should be done is a comprehensive evaluation of the environment where the application will deployed.
+
+For more complex environments, a Docker Swarm / Kubernetes cluster is recommended.
+
+IntelOwl's maintainers are available to offer [paid consultancy and mentorship](https://opencollective.com/intelowl-project) about that.
+
 ## Deployment Components
 
 IntelOwl is composed of various different technologies, namely:
