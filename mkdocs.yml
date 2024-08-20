@@ -68,7 +68,7 @@ theme:
     - content.code.copy
     - search.highlight
   palette:
-    scheme: filigran
+    scheme: DARKUI
   font:
     text: IBM Plex Sans
     code: Roboto Mono
