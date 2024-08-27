@@ -110,6 +110,11 @@ The following is the list of the available analyzers you can run out-of-the-box.
   - [edelucia Yara rules](https://github.com/edelucia/rules/tree/main/yara)
   - [LOLDrivers Yara Rules](https://github.com/magicsword-io/LOLDrivers)
   - your own added signatures. See [Advanced-Usage](https://intelowlproject.github.io/docs/IntelOwl/advanced_usage/#analyzers-with-special-configuration) for more details.
+- `Zippy_scan` : [Zippy](https://github.com/thinkst/zippy): Fast method to classify text as AI or human-generated; takes in `lzma`,`zlib`,`brotli` as input based engines; `ensemble` being default.
+- `Blint`: [Blint](https://github.com/owasp-dep-scan/blint) is a Binary Linter that checks the security properties and capabilities of your executables. Supported binary formats: - Android (apk, aab) - ELF (GNU, musl) - PE (exe, dll) - Mach-O (x64, arm64)
+- `Mobsf`: [MobSF](https://github.com/MobSF/mobsfscan/) is a static analysis tool that can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Android XML, Swift and Objective C Code.
+- `DroidLysis`: [DroidLysis](https://github.com/cryptax/droidlysis) is a pre-analysis tool for Android apps: it performs repetitive and boring tasks we'd typically do at the beginning of any reverse engineering. It disassembles the Android sample, organizes output in directories, and searches for suspicious spots in the code to look at. The output helps the reverse engineer speed up the first few steps of analysis.
+- `Artifacts`: [Artifacts](https://github.com/guelfoweb/artifacts) is a tool that does APK strings analysis. Useful for first analysis.
 
 ###### External services
 
@@ -135,8 +140,6 @@ The following is the list of the available analyzers you can run out-of-the-box.
 - `VirusTotal_v3_File`: check the file hash on VirusTotal. With TLP `CLEAR`, in case the hash is not found, you would send the file to the service.
 - `YARAify_File_Scan`: scan a file against public and non-public YARA and ClamAV signatures in [YARAify](https://yaraify.abuse.ch/) public service
 - `YARAify_File_Search`: scan an hash against [YARAify](https://yaraify.abuse.ch/) database
-- `Zippy_scan` : [Zippy](https://github.com/thinkst/zippy): Fast method to classify text as AI or human-generated; takes in `lzma`,`zlib`,`brotli` as input based engines; `ensemble` being default.
-- `Blint`: [Blint](https://github.com/owasp-dep-scan/blint) is a Binary Linter that checks the security properties and capabilities of your executables. Supported binary formats: - Android (apk, aab) - ELF (GNU, musl) - PE (exe, dll) - Mach-O (x64, arm64)
 
 ##### Observable analyzers (ip, domain, url, hash)
 
@@ -145,6 +148,7 @@ The following is the list of the available analyzers you can run out-of-the-box.
 - `CheckDMARC`: An SPF and DMARC DNS records validator for domains.
 - `DNStwist`: Scan a url/domain to find potentially malicious permutations via dns fuzzing. [dnstwist repo](https://github.com/elceef/dnstwist)
 - `Thug_URL_Info`: Perform hybrid dynamic/static analysis on a URL using [Thug low-interaction honeyclient](https://thug-honeyclient.readthedocs.io/)
+- `AILTypoSquatting`:[AILTypoSquatting](https://github.com/typosquatter/ail-typo-squatting) is a Python library to generate list of potential typo squatting domains with domain name permutation engine to feed AIL and other systems.
 
 ###### External services
 
@@ -243,7 +247,6 @@ The following is the list of the available analyzers you can run out-of-the-box.
 - `HudsonRock`: [Hudson Rock](https://cavalier.hudsonrock.com/docs) provides its clients the ability to query a database of over 27,541,128 computers which were compromised through global info-stealer campaigns performed by threat actors.
 - `CyCat`: [CyCat](https://cycat.org/) or the CYbersecurity Resource CATalogue aims at mapping and documenting, in a single formalism and catalogue available cybersecurity tools, rules, playbooks, processes and controls.
 - `Vulners`: [Vulners](vulners.com) is the most complete and the only fully correlated security intelligence database, which goes through constant updates and links 200+ data sources in a unified machine-readable format. It contains 8 mln+ entries, including CVEs, advisories, exploits, and IoCs — everything you need to stay abreast on the latest security threats.
-- `AILTypoSquatting`:[AILTypoSquatting](https://github.com/typosquatter/ail-typo-squatting) is a Python library to generate list of potential typo squatting domains with domain name permutation engine to feed AIL and other systems.
 
 ##### Generic analyzers (email, phone number, etc.; anything really)
 
