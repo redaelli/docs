@@ -2,7 +2,7 @@
 
 ## General Guidance
 
-Please refer to [IntelOwl Documentation](https://intelowl.readthedocs.io/en/latest/) for everything missing here.
+Please refer to [IntelOwl Documentation](https://intelowlproject.github.io/docs/IntelOwl/introduction/) for everything missing here.
 
 ## Rules
 
