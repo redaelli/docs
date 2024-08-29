@@ -95,6 +95,7 @@ extra:
       link: https://x.com/intel_owl
 
 markdown_extensions:
+  - mdx_truly_sane_lists
   - attr_list
   - md_in_html
   - tables
