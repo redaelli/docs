@@ -4,9 +4,9 @@ hide:
   - toc
 ---
 
-# IntelOwl Centralised Documentation
+# IntelOwl Centralized Documentation
 
-Welcome to the IntelOwl Centralised Documentation. Here you will be able to find all documentation for all projects under IntelOwl.
+Welcome to the IntelOwl Centralized Documentation. Here you will be able to find all documentation for all projects under IntelOwl.
 
 ## Introduction
 

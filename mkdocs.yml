@@ -1,12 +1,12 @@
-site_name: IntelOwl Documentation
+site_name: IntelOwl Project Documentation
 site_description: "A centralized documentation for all the projects under IntelOwl."
 site_author: "IntelOwl Project"
 
 copyright: |
   &copy; IntelOwl Project
 
-repo_name: intelowlproject/docs
-repo_url: https://github.com/intelowlproject/docs
+repo_name: intelowlproject/IntelOwl
+repo_url: https://github.com/intelowlproject/IntelOwl
 
 nav:
   - Home: "index.md"
