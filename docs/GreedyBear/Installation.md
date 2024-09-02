@@ -39,7 +39,7 @@ The app administrator can enable/disable the extraction of source IPs for specif
 This is used for honeypots that are not specifically implemented to extract additional information (so not Log4Pot and Cowrie).
 
 Note that GreedyBear _needs_ a running instance of ElasticSearch of a TPoT to function.
-If you don't have one, you can make the following changes to make GreeyBear spin up it's own ElasticSearch and Kibana instances.
+If you don't have one, you can make the following changes to make GreeyBear spin up it's own ElasticSearch instance.
 (...Care! This option would require enough RAM to run the additional containers. Suggested is >=16GB):
 
 1. In `docker/env_file`, set the variable `ELASTIC_ENDPOINT` to `http://elasticsearch:9200`.
@@ -65,6 +65,14 @@ In the `env_file`, configure different variables as explained below.
 - `SLACK_TOKEN`: Slack token of your Slack application that will be used to send/receive notifications
 - `DEFAULT_SLACK_CHANNEL`: ID of the Slack channel you want to post the message to
 
+## ElasticSearch compatibility.
+Greedybear leverages a [python client](https://elasticsearch-dsl.readthedocs.io/en/latest/) for interacting with ElasticSearch which requires to be at the exact major version of the related T-POT ElasticSearch instance.
+This means that there could problems if those versions do not match.
+
+The actual version of the client installed is the 8.15.0 which allows to run TPOT version from 22.04.0 to 24.04.0 without any problems (and some later ones...we regularly check T-POT releases but we could miss one or two here.)
+
+If you want to have compatibility with previous versions, you need to change the `elasticsearch-dsl` version [here](https://github.com/intelowlproject/GreedyBear/blob/main/requirements/project-requirements.txt) and [re-build](https://intelowlproject.github.io/docs/GreedyBear/Installation/#rebuilding-the-project-creating-custom-docker-build) locally the project.
+
 ## Update and Re-build
 
 ### Rebuilding the project / Creating custom docker build
@@ -86,19 +94,3 @@ $ docker pull intelowlproject/greedybear:prod # pull new docker images
 $ docker-compose down # stop and destroy the currently running GreedyBear containers
 $ docker-compose up # restart the GreedyBear application
 ```
-
-## Installer for TPot Instance
-
-The file 'installer_on_tpot.sh' allows the automatic installation of Greedybear on an existing TPot instance.
-You can choose the type of Greedybear you want to install (http, https or local).
-The installer will either clone Greedybear to '/opt/GreedyBear' or if Greedybear exists on your system you need to input the absolute path to the existing Greedybear folder.
-It will prompt you for the necessary information/secrets needed.
-
-Example: `sudo ./installer.sh --type=http --folder=/opt/GreedyBear`
-
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-This installer is not officialy supported neither by Greedybear nor by TPOT maintainers.
-It must be considered as a POC to have GB and TPOT installed in the same place.
-Greedybear is supported to be executed only in a separate instance and to connect externally with the TPOTs.
-</div>
