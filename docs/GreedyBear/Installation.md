@@ -1,5 +1,19 @@
 # Installation
 
+## Requirements
+For requirements, please refer to [IntelOwl requirements](https://intelowlproject.github.io/docs/IntelOwl/installation/#requirements) which are the same
+
+Note that GreedyBear _needs_ a running instance of ElasticSearch of a T-POT to function. In `docker/env_file`, set the variable `ELASTIC_ENDPOINT` with the URL of your Elasticsearch T-POT.
+
+If you don't have one, you can make the following changes to make GreeyBear spin up it's own ElasticSearch instance.
+(...Care! This option would require enough RAM to run the additional containers. Suggested is >=16GB):
+
+1. In `docker/env_file`, set the variable `ELASTIC_ENDPOINT` to `http://elasticsearch:9200`.
+2. Add `:docker/elasticsearch.yml` to the last defined `COMPOSE_FILE` variable or uncomment the `# local development with elasticsearch container` block in `.env` file.
+
+
+## Installation steps
+
 Start by cloning the project
 
 ```bash
@@ -37,13 +51,6 @@ docker exec -ti greedybear_uwsgi python3 manage.py createsuperuser
 
 The app administrator can enable/disable the extraction of source IPs for specific honeypots from the Django Admin.
 This is used for honeypots that are not specifically implemented to extract additional information (so not Log4Pot and Cowrie).
-
-Note that GreedyBear _needs_ a running instance of ElasticSearch of a TPoT to function.
-If you don't have one, you can make the following changes to make GreeyBear spin up it's own ElasticSearch instance.
-(...Care! This option would require enough RAM to run the additional containers. Suggested is >=16GB):
-
-1. In `docker/env_file`, set the variable `ELASTIC_ENDPOINT` to `http://elasticsearch:9200`.
-2. Add `:docker/elasticsearch.yml` to the last defined `COMPOSE_FILE` variable or uncomment the `# local development with elasticsearch container` block in `.env` file.
 
 ### Environment configuration
 
