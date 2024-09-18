@@ -371,6 +371,8 @@ A very powerful use is case is to **combine Ingestors with Connectors** to autom
 #### List of pre-built Ingestors
 
 - `ThreatFox`: Retrieves daily ioc from `https://threatfox.abuse.ch/` and analyze them.
+- `MalwareBazaar`: Retrieves hourly samples from `https://bazaar.abuse.ch/` and analyze them.
+- `VirusTotal`: Perform intelligence queries at hourly intervals from `https://www.virustotal.com/` (premium api key required), then retrieves the samples and analyzes them.
 
 ### Playbooks
 
