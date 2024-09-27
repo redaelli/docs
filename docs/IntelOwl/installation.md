@@ -260,11 +260,11 @@ Starting from IntelOwl 4.0.0, with the startup script you can select which versi
 This  can be helpful to keep using old versions in case of retrocompatibility issues. The <code>--version</code> parameter checks out the Git Repository to the Tag of the version that you have chosen. This means that if you checkout to a v3.x.x version, you won't have the <code>--version</code> parameter anymore so you would need to manually checkout back to the <code>master</code> branch to use newer versions.
 </div>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-If, for any reason, the `start` script does not work in your environment, we suggest to use plain `docker compose` and configuring manually all the optional containers you need.
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+If, for any reason, the <code>start</code> script does not work in your environment, we suggest to use plain <code>docker compose</code> and configuring manually all the optional containers you need.
 
-The basic replacement of `./start prod up` would be:
+The basic replacement of <code>./start prod up</code> would be:
 ```commandline
 docker compose --project-directory docker -f docker/default.yml -f docker/postgres.override.yml -f docker/redis.override.yml -f docker/nginx.override.yml -p intelowl up
 ```
