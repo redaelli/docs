@@ -68,6 +68,7 @@ The first time you start IntelOwl, a lot of database migrations are being applie
 ## Infrastructure Requirements
 
 These are our recommendations for dedicated deployments of IntelOwl:
+
 - Basic Installation in a VM: 2 CPU, 4GB RAM, 20GB Disk
 - Intensive Usage (hundreds of analysis in a hour) in a single VM: 8CPU, 16GB RAM and 80GB Disk.
 
