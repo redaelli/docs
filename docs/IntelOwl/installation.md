@@ -229,7 +229,7 @@ The CLI provides the primitives to correctly build, run or stop the containers f
 <ul>
 <li>It is possible to attach every optional docker container that IntelOwl has:
 <a href="https://intelowlproject.github.io/docs/IntelOwl/advanced_configuration/#multi-queue"><em>multi_queue</em></a> with <em>traefik</em> enabled while every <a href="https://intelowlproject.github.io/docs/IntelOwl/advanced_usage/#optional-analyzers">optional docker analyzer</a> is active.</li> 
-<li>It is possible to insert an optional docker argument that the CLI will pass to <code>docker-compose</code></li>
+<li>It is possible to insert an optional docker argument that the CLI will pass to <code>docker compose</code></li>
 </ul>
 </div>
 
@@ -258,6 +258,16 @@ Example:
 <p class="admonition-title">Hint</p>
 Starting from IntelOwl 4.0.0, with the startup script you can select which version of IntelOwl you want to run (<code>--version</code>).
 This  can be helpful to keep using old versions in case of retrocompatibility issues. The <code>--version</code> parameter checks out the Git Repository to the Tag of the version that you have chosen. This means that if you checkout to a v3.x.x version, you won't have the <code>--version</code> parameter anymore so you would need to manually checkout back to the <code>master</code> branch to use newer versions.
+</div>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+If, for any reason, the `start` script does not work in your environment, we suggest to use plain `docker compose` and configuring manually all the optional containers you need.
+
+The basic replacement of `./start prod up` would be:
+```commandline
+docker compose --project-directory docker -f docker/default.yml -f docker/postgres.override.yml -f docker/redis.override.yml -f docker/nginx.override.yml -p intelowl up
+```
 </div>
 
 ### Stop
