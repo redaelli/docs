@@ -163,8 +163,8 @@ The default broker, if nothing is specified, is `Redis`.
 
 To use `RabbitMQ`, you must use the option `--rabbitmq` when launching IntelOwl with the `./start` script.
 
-To use `Aws SQS`, you must use the option `--sqs` when launching IntelOwl with the `.start` script.
-In that case, you should create new SQS queues in AWS called `intelowl-<environment>-<queue_name>` and give your instances on AWS the proper permissions to access it.
+To use `AWS SQS`, you must use the option `--sqs` when launching IntelOwl with the `.start` script.
+In that case, you should create new FIFO SQS queues in AWS called `intelowl-<environment>-<queue_name>.fifo` and give your instances on AWS the proper permissions to access it.
 Moreover, you must populate the `AWS_USER_NUMBER`. This is required to connect in the right way to the selected SQS queues.
 Only FIFO queues are supported.
 
