@@ -11,17 +11,24 @@ Right now only ElasticSearch v8 is supported.
 ### Configuration
 In the `env_file_app_template`, you'd see various elasticsearch related environment variables. The user should spin their own Elastic Search instance and configure these variables.
 
-* ELASTIC_DSL_ENABLED: Enable the ElasticSearch integration to perform advanced searches.
-* ELASTIC_HOST: URL of the Elasticsearch instance.
-* ELASTIC_PASSWORD: (optional) Password of the "elastic" user. This can be empty in case of external services with credentials in the url.
+* ELASTICSEARCH_DSL_ENABLED: Enable the ElasticSearch integration to perform advanced searches.
+* ELASTICSEARCH_DSL_HOST: URL of the Elasticsearch instance.
+* ELASTICSEARCH_DSL_PASSWORD: (optional) Password of the "elastic" user. This can be empty in case of external services with credentials in the url.
 * ELASTICSEARCH_BI_ENABLED: Use the Business Intelligence feature.
 * ELASTICSEARCH_BI_HOST: URL of the Elasticsearch instance for the BI.
 * ELASTICSEARCH_BI_INDEX: Base path of the BI index.
 
+In the `env_file_elasticsearch_template` there is a viarable called `ELASTICSEARCH_PASSWORD`. This name is forced by elastic to set the password into the container.
+
 #### Example Configuration
 
-* Use external instance: In this case it's enough to set the `ELASTIC_DSL_ENABLED` to `True` and `ELASTIC_HOST` with the URL of the external instance.
-* Use docker instance: With the `--elastic` option you can run a container based Elasticsearch instance. In this case the `ELASTIC_HOST` must be set to https://elasticsearch:9200. Configure also `ELASTIC_PASSWORD`.
+* Use external instance: In this case it's enough to set the `ELASTICSEARCH_DSL_ENABLED` to `True` and `ELASTICSEARCH_DSL_HOST` with the URL of the external instance.
+* Use docker instance:
+   * Before starting IntelOwl move inside `docker` folder.
+   * `cp env_file_elasticsearch_template env_file_elasticsearch`
+   * Populate the var `ELASTICSEARCH_PASSWORD` inside the file `env_file_elasticsearch`.
+   * Populate the var `ELASTICSEARCH_DSL_PASSWORD` in the file `env_file_app` with the same value of `ELASTICSEARCH_PASSWORD`. Populate also `ELASTICSEARCH_DSL_HOST` with https://elasticsearch:9200.
+   * Start the project with `--elastic` in this way a container based Elasticsearch instance will start.
 
 ### Data Search
 
