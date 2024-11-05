@@ -11,6 +11,7 @@ Right now only ElasticSearch v8 is supported.
 ### Configuration
 In the `env_file_app_template`, you'd see various elasticsearch related environment variables. The user should spin their own Elastic Search instance and configure these variables.
 
+* ELASTIC_DSL_ENABLED: Enable the ElasticSearch integration to perform advanced searches.
 * ELASTIC_HOST: URL of the Elasticsearch instance.
 * ELASTIC_PASSWORD: (optional) Password of the "elastic" user. This can be empty in case of external services with credentials in the url.
 * ELASTICSEARCH_BI_ENABLED: Use the Business Intelligence feature.
@@ -19,7 +20,7 @@ In the `env_file_app_template`, you'd see various elasticsearch related environm
 
 #### Example Configuration
 
-* Use external instance: In this case it's enough to set the `ELASTIC_HOST` with the URL of the external instance.
+* Use external instance: In this case it's enough to set the `ELASTIC_DSL_ENABLED` to `True` and `ELASTIC_HOST` with the URL of the external instance.
 * Use docker instance: With the `--elastic` option you can run a container based Elasticsearch instance. In this case the `ELASTIC_HOST` must be set to https://elasticsearch:9200. Configure also `ELASTIC_PASSWORD`.
 
 ### Data Search
