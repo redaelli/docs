@@ -208,11 +208,13 @@ You need to configure the environment variable `AWS_SES` to `True` to enable it.
 
 You can use the "Secrets Manager" to store your credentials. In this way your secrets would be better protected.
 
-Instead of adding the variables to the environment file, you should just add them with the same name on the AWS Secrets Manager and Intel Owl will fetch them transparently.
+First you need to set the environment variable `AWS_SECRETS` to `True` to enable this mode.
 
-Obviously, you should have created and managed the permissions in AWS in advance and accordingly to your infrastructure requirements.
+Then, instead of adding the variables to the environment file, you should just add them with the same name on the AWS Secrets Manager and Intel Owl will fetch them transparently.
 
-Also, you need to set the environment variable `AWS_SECRETS` to `True` to enable this mode.
+Beware! Any left environment variable would be prioritized. So, you want to use your secrets in AWS, make sure to have removed the related environment variables locally.
+
+Obviously, you should also have created and managed the permissions in AWS in advance and accordingly to your infrastructure requirements.
 
 #### NFS
 
