@@ -254,7 +254,7 @@ Since v4, IntelOwl integrated the notification system from the `certego_saas` pa
 
 The user would find the Notifications button on the top right of the page:
 
-<img style="border: 0.2px solid black" width=220 height=210 src="https://raw.githubusercontent.com/intelowlproject/IntelOwl/master/docs/static/notifications.png">
+<img style="border: 0.2px solid black" width=220 height=210 src="https://raw.githubusercontent.com/intelowlproject/docs/main/docs/IntelOwl/static/notifications.png">
 
 There the user can read notifications provided by either the administrators or the IntelOwl Maintainers.
 
